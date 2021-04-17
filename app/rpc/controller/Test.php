@@ -9,6 +9,6 @@ class Test
     {
         $card = $data['card'];
 
-        return json_encode(['is'=>(new Card())->isKingBomb($card)],320);
+        return json_encode((new Card())->cardType($card),320);
     }
 }

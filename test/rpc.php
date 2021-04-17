@@ -4,7 +4,7 @@ $client = stream_socket_client('tcp://127.0.0.1:9705');
 $request = [
     'class'   => 'Test',
     'method'  => 'test',
-    'args'    => ['card'=>['M1','M0']], // 100 是 $uid
+    'args'    => ['card'=>['WJ','CJ']], // 100 是 $uid
 ];
 fwrite($client, json_encode($request)."\n"); // text协议末尾有个换行符"\n"
 $result = fgets($client, 10240000);
